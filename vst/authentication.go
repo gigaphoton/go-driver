@@ -25,8 +25,8 @@ package vst
 import (
 	"context"
 
-	driver "github.com/arangodb/go-driver"
-	"github.com/arangodb/go-driver/vst/protocol"
+	driver "github.com/gigaphoton/go-driver"
+	"github.com/gigaphoton/go-driver/vst/protocol"
 	velocypack "github.com/arangodb/go-velocypack"
 )
 

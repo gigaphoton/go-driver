@@ -36,10 +36,10 @@ import (
 	"strings"
 	"time"
 
-	driver "github.com/arangodb/go-driver"
-	"github.com/arangodb/go-driver/cluster"
-	"github.com/arangodb/go-driver/util"
 	velocypack "github.com/arangodb/go-velocypack"
+	driver "github.com/gigaphoton/go-driver"
+	"github.com/gigaphoton/go-driver/cluster"
+	"github.com/gigaphoton/go-driver/util"
 )
 
 const (

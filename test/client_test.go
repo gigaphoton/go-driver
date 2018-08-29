@@ -36,10 +36,10 @@ import (
 
 	_ "net/http/pprof"
 
-	driver "github.com/arangodb/go-driver"
-	"github.com/arangodb/go-driver/http"
-	"github.com/arangodb/go-driver/vst"
-	"github.com/arangodb/go-driver/vst/protocol"
+	driver "github.com/gigaphoton/go-driver"
+	"github.com/gigaphoton/go-driver/http"
+	"github.com/gigaphoton/go-driver/vst"
+	"github.com/gigaphoton/go-driver/vst/protocol"
 )
 
 var (

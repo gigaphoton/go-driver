@@ -31,7 +31,7 @@ import (
 	"sync"
 	"testing"
 
-	driver "github.com/arangodb/go-driver"
+	driver "github.com/gigaphoton/go-driver"
 )
 
 // TestConcurrentCreateSmallDocuments make a lot of concurrent CreateDocument calls.

@@ -29,7 +29,7 @@ import (
 	"sync/atomic"
 	"time"
 
-	driver "github.com/arangodb/go-driver"
+	driver "github.com/gigaphoton/go-driver"
 )
 
 const (

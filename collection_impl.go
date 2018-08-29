@@ -24,6 +24,7 @@ package driver
 
 import (
 	"context"
+	"fmt"
 	"path"
 )
 
@@ -238,6 +239,34 @@ func (c *collection) Remove(ctx context.Context) error {
 		return WithStack(err)
 	}
 	applyContextSettings(ctx, req)
+	resp, err := c.conn.Do(ctx, req)
+	if err != nil {
+		return WithStack(err)
+	}
+	if err := resp.CheckStatus(200); err != nil {
+		return WithStack(err)
+	}
+	return nil
+}
+
+// Rename renames the collection.
+// If the collection does not exist, a NotFoundError is returned.
+func (c *collection) Rename(ctx context.Context, newCollectionName string) error {
+	if len(newCollectionName) <= 0 {
+		return WithStack(fmt.Errorf("newCollectionName is invalid"))
+	}
+	req, err := c.conn.NewRequest("PUT", path.Join(c.relPath("collection"), "rename"))
+	if err != nil {
+		return WithStack(err)
+	}
+	opts := struct {
+		Name string `json:"name"`
+	}{
+		Name: newCollectionName,
+	}
+	if _, err := req.SetBody(opts); err != nil {
+		return WithStack(err)
+	}
 	resp, err := c.conn.Do(ctx, req)
 	if err != nil {
 		return WithStack(err)

@@ -33,8 +33,8 @@ import (
 	"strconv"
 	"strings"
 
-	driver "github.com/arangodb/go-driver"
 	velocypack "github.com/arangodb/go-velocypack"
+	driver "github.com/gigaphoton/go-driver"
 )
 
 // httpVPackRequest implements driver.Request using standard golang http requests.
