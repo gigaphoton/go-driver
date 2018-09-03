@@ -159,6 +159,13 @@ func (c *edgeCollection) Remove(ctx context.Context) error {
 	return nil
 }
 
+// Rename renames the collection.
+// If the collection does not exist, a NotFoundError is returned.
+func (c *edgeCollection) Rename(ctx context.Context, newCollectionName string) error {
+
+	return nil
+}
+
 // Truncate removes all documents from the collection, but leaves the indexes intact.
 func (c *edgeCollection) Truncate(ctx context.Context) error {
 	if err := c.rawCollection().Truncate(ctx); err != nil {

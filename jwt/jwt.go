@@ -23,8 +23,8 @@
 package jwt
 
 import (
-	driver "github.com/arangodb/go-driver"
 	jg "github.com/dgrijalva/jwt-go"
+	driver "github.com/gigaphoton/go-driver"
 )
 
 const (

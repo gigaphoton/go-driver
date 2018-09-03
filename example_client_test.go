@@ -28,8 +28,8 @@ import (
 	"fmt"
 	"log"
 
-	driver "github.com/arangodb/go-driver"
-	"github.com/arangodb/go-driver/http"
+	driver "github.com/gigaphoton/go-driver"
+	"github.com/gigaphoton/go-driver/http"
 )
 
 func ExampleNewClient() {

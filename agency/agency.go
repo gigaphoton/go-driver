@@ -26,7 +26,7 @@ import (
 	"context"
 	"time"
 
-	driver "github.com/arangodb/go-driver"
+	driver "github.com/gigaphoton/go-driver"
 )
 
 // Agency provides API implemented by the ArangoDB agency.
